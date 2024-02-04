@@ -3,7 +3,7 @@ version: "3.4"
 
 services:
   Bazooka-Customers-Api:
-    image: ${REGISTRY:-Bazooka}/Bazooka.Customers.Api:{PLATFORM:-linux}-${TAG:-latest}
+    image: ${REGISTRY:-bazooka}/bazooka.customers.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: Services/Customers/Bazooka.Customers.Api/Dockerfile
