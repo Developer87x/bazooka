@@ -2,8 +2,12 @@ version: "3.4"
 
 
 services:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2019-latest
   Bazooka-Customers-Api:
     image: ${REGISTRY:-bazooka}/bazooka.customers.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: Services/Customers/Bazooka.Customers.Api/Dockerfile
+    depends_on:
+      - sqldata
