@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Bazooka.Customers.Api.Models;
 using FluentValidation;
 
@@ -11,7 +7,9 @@ namespace Bazooka.Customers.Api.Applications.Validations
     {
         public CustomerValidation()
         {
-            RuleFor(s=>s.EmailAddress).NotNull().EmailAddress();
+            RuleFor(s=>s.EmailAddress).NotNull().EmailAddress().Length(50);
+            
+
         }
     }
 }
