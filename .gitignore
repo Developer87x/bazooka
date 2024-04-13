@@ -477,3 +477,5 @@ $RECYCLE.BIN/
 *.lnk
 vscode/
 sql-data/
+.vscode/
+.angular/
