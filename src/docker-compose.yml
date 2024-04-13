@@ -1,13 +1,30 @@
 version: "3.4"
-
-
 services:
   sqldata:
     image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sql-server
+    # networks:
+    #   # - net
   Bazooka-Customers-Api:
     image: ${REGISTRY:-bazooka}/bazooka.customers.api:${PLATFORM:-linux}-${TAG:-latest}
+    container_name: bazookaCustomers
     build:
       context: .
       dockerfile: Services/Customers/Bazooka.Customers.Api/Dockerfile
     depends_on:
       - sqldata
+   
+  Bazooka-Web-Angular:
+    image: ${REGISTRY:-bazooka}/bazooka.web.angular:${PLATFORM:-linux}-${TAG:-latest}
+    container_name: bazookaAngular
+    build:
+      context: Web/bazooka-angular
+      dockerfile: Dockerfile
+    
+  Bazooka-ApiGateways:
+    image: ${REGISTRY:-bazooka}/bazooka.apigateways:${PLATFORM:-linux}-${TAG:-latest}
+    container_name: bazookaApiGateways
+    build:
+      context: .
+      dockerfile: ApiGateways/Dockerfile
+
