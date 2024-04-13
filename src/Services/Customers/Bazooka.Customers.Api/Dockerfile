@@ -8,12 +8,9 @@ WORKDIR /src
 
 COPY "Bazooka.sln" "Bazooka.sln"
 COPY "Services/Customers/Bazooka.Customers.Api/Bazooka.Customers.Api.csproj" "Services/Customers/Bazooka.Customers.Api/Bazooka.Customers.Api.csproj"
-
+COPY "ApiGateways/ApiGateways.csproj" "ApiGateways/ApiGateways.csproj"
 COPY "NuGet.config" "NuGet.config"
-
 RUN dotnet restore "Bazooka.sln"
-
-
 
 COPY . .
 WORKDIR /src/Services/Customers/Bazooka.Customers.Api
