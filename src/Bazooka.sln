@@ -3,6 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B8E24BA7-B4F5-42A7-B005-BB839CC14271}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Customers", "Customers", "{89000D34-594B-4544-8CEE-8FF4305F8CFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bazooka.Customers.Api", "Services\Customers\Bazooka.Customers.Api\Bazooka.Customers.Api.csproj", "{50E65C1E-5676-4512-8019-8A0B2A55E4E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateways", "ApiGateways\ApiGateways.csproj", "{F82E11A4-9715-4CF6-8703-41C8FA8ECE25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{668F96BF-DED3-448F-AD41-AA0CBB62553F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bazooka.Identity.Api", "Services\Identity\Bazooka.Identity.Api\Bazooka.Identity.Api.csproj", "{E8A6097D-68A4-4C77-844B-B4769038735D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +22,25 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50E65C1E-5676-4512-8019-8A0B2A55E4E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E65C1E-5676-4512-8019-8A0B2A55E4E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E65C1E-5676-4512-8019-8A0B2A55E4E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E65C1E-5676-4512-8019-8A0B2A55E4E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F82E11A4-9715-4CF6-8703-41C8FA8ECE25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82E11A4-9715-4CF6-8703-41C8FA8ECE25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82E11A4-9715-4CF6-8703-41C8FA8ECE25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82E11A4-9715-4CF6-8703-41C8FA8ECE25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A6097D-68A4-4C77-844B-B4769038735D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A6097D-68A4-4C77-844B-B4769038735D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A6097D-68A4-4C77-844B-B4769038735D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A6097D-68A4-4C77-844B-B4769038735D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{89000D34-594B-4544-8CEE-8FF4305F8CFB} = {B8E24BA7-B4F5-42A7-B005-BB839CC14271}
+		{50E65C1E-5676-4512-8019-8A0B2A55E4E1} = {89000D34-594B-4544-8CEE-8FF4305F8CFB}
+		{668F96BF-DED3-448F-AD41-AA0CBB62553F} = {B8E24BA7-B4F5-42A7-B005-BB839CC14271}
+		{E8A6097D-68A4-4C77-844B-B4769038735D} = {668F96BF-DED3-448F-AD41-AA0CBB62553F}
 	EndGlobalSection
 EndGlobal

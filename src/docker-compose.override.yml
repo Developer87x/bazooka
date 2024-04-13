@@ -1,0 +1,27 @@
+version: "3.4"
+services:
+  sqldata:
+    environment:
+      - SA_PASSWORD=Frazyecool@23
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+    volumes:
+      - $PWD/sql-data:/var/opt/mssql
+ 
+   
+  Bazooka-Customers-Api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5080:80"
+  
+  Bazooka-Web-Angular:
+    ports:
+      - "4200:80"
+  Bazooka-ApiGateways:
+    ports:
+      - "5225:80"
+
+   
+
